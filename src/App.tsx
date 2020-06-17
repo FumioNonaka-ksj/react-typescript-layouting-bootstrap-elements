@@ -95,10 +95,8 @@ function App() {
 	const resetBoxCount = useCallback(
 		(width: number, height: number) => {
 			if (boxSize < 10) { return; }
-			const _boxSize = boxSize;
-			const offset = 1;
-			const countX = Math.floor(width / _boxSize) + offset;
-			const countY = Math.floor(height / _boxSize) + offset;
+			const countX = Math.floor(width / boxSize) + 1;
+			const countY = Math.floor(height / boxSize) + 1;
 			setBoxCount(countX * countY);
 			},
 		[boxSize],
